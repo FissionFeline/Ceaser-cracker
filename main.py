@@ -1,8 +1,8 @@
-def get_input():
-    str_input = input()
+def get_input(msg = "Enter something"):
+    print(msg)
+    str_input = input(">")
     if(len(str_input) < 3 or str_input.isspace()):
-        print("Please enter something valid")
-        return get_input()
+        return get_input("This requires valid input")
     return str_input
-
-get_input()
+    
+get_input("Please enter a pharse to decrypt")
