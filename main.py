@@ -1,3 +1,6 @@
+import sys
+
+
 def get_input(msg = "Enter something"):
     print(msg)
     str_input = input(">")
@@ -6,6 +9,12 @@ def get_input(msg = "Enter something"):
     return str_input
 
 def main():
+    args = sys.argv
+
+    if len(args) == 2 : 
+        print("File mode")
+         
+        quit()
     str_to_decrypt = get_input("Please enter a pharse to decrypt")
     char_count = {}
     for i in str_to_decrypt:
