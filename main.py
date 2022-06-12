@@ -7,13 +7,7 @@ def get_input(msg = "Enter something"):
 
 def main():
     str_to_decrypt = get_input("Please enter a pharse to decrypt")
-    char_count = {}
-    for i in str_to_decrypt:
-        if(i in char_count):
-            char_count[i] = 1
-        else:
-            char_count[i] = char_count[i] + 1
-    
+    char_count = {char:str_to_decrypt.count(char) for char in str_to_decrypt}
 
 
 if(__name__ == "__main__"):
